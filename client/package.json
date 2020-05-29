@@ -1,7 +1,7 @@
 {
   "name": "client",
   "private": true,
-  "version": "0.0.3-develop",
+  "version": "0.0.4-develop",
   "description": "client",
   "license": "MIT",
   "files": [

@@ -15,6 +15,22 @@ export namespace Components {
     }
     interface AppRoot {
     }
+    interface InputCountry {
+    }
+    interface InputModel {
+    }
+    interface InputSerial {
+    }
+    interface InputSour {
+    }
+    interface InputSweet {
+    }
+    interface InputVisual {
+    }
+    interface InputWeight {
+    }
+    interface WorkNumber {
+    }
 }
 declare global {
     interface HTMLAppFooterElement extends Components.AppFooter, HTMLStencilElement {
@@ -41,11 +57,67 @@ declare global {
         prototype: HTMLAppRootElement;
         new (): HTMLAppRootElement;
     };
+    interface HTMLInputCountryElement extends Components.InputCountry, HTMLStencilElement {
+    }
+    var HTMLInputCountryElement: {
+        prototype: HTMLInputCountryElement;
+        new (): HTMLInputCountryElement;
+    };
+    interface HTMLInputModelElement extends Components.InputModel, HTMLStencilElement {
+    }
+    var HTMLInputModelElement: {
+        prototype: HTMLInputModelElement;
+        new (): HTMLInputModelElement;
+    };
+    interface HTMLInputSerialElement extends Components.InputSerial, HTMLStencilElement {
+    }
+    var HTMLInputSerialElement: {
+        prototype: HTMLInputSerialElement;
+        new (): HTMLInputSerialElement;
+    };
+    interface HTMLInputSourElement extends Components.InputSour, HTMLStencilElement {
+    }
+    var HTMLInputSourElement: {
+        prototype: HTMLInputSourElement;
+        new (): HTMLInputSourElement;
+    };
+    interface HTMLInputSweetElement extends Components.InputSweet, HTMLStencilElement {
+    }
+    var HTMLInputSweetElement: {
+        prototype: HTMLInputSweetElement;
+        new (): HTMLInputSweetElement;
+    };
+    interface HTMLInputVisualElement extends Components.InputVisual, HTMLStencilElement {
+    }
+    var HTMLInputVisualElement: {
+        prototype: HTMLInputVisualElement;
+        new (): HTMLInputVisualElement;
+    };
+    interface HTMLInputWeightElement extends Components.InputWeight, HTMLStencilElement {
+    }
+    var HTMLInputWeightElement: {
+        prototype: HTMLInputWeightElement;
+        new (): HTMLInputWeightElement;
+    };
+    interface HTMLWorkNumberElement extends Components.WorkNumber, HTMLStencilElement {
+    }
+    var HTMLWorkNumberElement: {
+        prototype: HTMLWorkNumberElement;
+        new (): HTMLWorkNumberElement;
+    };
     interface HTMLElementTagNameMap {
         "app-footer": HTMLAppFooterElement;
         "app-home": HTMLAppHomeElement;
         "app-profile": HTMLAppProfileElement;
         "app-root": HTMLAppRootElement;
+        "input-country": HTMLInputCountryElement;
+        "input-model": HTMLInputModelElement;
+        "input-serial": HTMLInputSerialElement;
+        "input-sour": HTMLInputSourElement;
+        "input-sweet": HTMLInputSweetElement;
+        "input-visual": HTMLInputVisualElement;
+        "input-weight": HTMLInputWeightElement;
+        "work-number": HTMLWorkNumberElement;
     }
 }
 declare namespace LocalJSX {
@@ -58,11 +130,35 @@ declare namespace LocalJSX {
     }
     interface AppRoot {
     }
+    interface InputCountry {
+    }
+    interface InputModel {
+    }
+    interface InputSerial {
+    }
+    interface InputSour {
+    }
+    interface InputSweet {
+    }
+    interface InputVisual {
+    }
+    interface InputWeight {
+    }
+    interface WorkNumber {
+    }
     interface IntrinsicElements {
         "app-footer": AppFooter;
         "app-home": AppHome;
         "app-profile": AppProfile;
         "app-root": AppRoot;
+        "input-country": InputCountry;
+        "input-model": InputModel;
+        "input-serial": InputSerial;
+        "input-sour": InputSour;
+        "input-sweet": InputSweet;
+        "input-visual": InputVisual;
+        "input-weight": InputWeight;
+        "work-number": WorkNumber;
     }
 }
 export { LocalJSX as JSX };
@@ -73,6 +169,14 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "input-country": LocalJSX.InputCountry & JSXBase.HTMLAttributes<HTMLInputCountryElement>;
+            "input-model": LocalJSX.InputModel & JSXBase.HTMLAttributes<HTMLInputModelElement>;
+            "input-serial": LocalJSX.InputSerial & JSXBase.HTMLAttributes<HTMLInputSerialElement>;
+            "input-sour": LocalJSX.InputSour & JSXBase.HTMLAttributes<HTMLInputSourElement>;
+            "input-sweet": LocalJSX.InputSweet & JSXBase.HTMLAttributes<HTMLInputSweetElement>;
+            "input-visual": LocalJSX.InputVisual & JSXBase.HTMLAttributes<HTMLInputVisualElement>;
+            "input-weight": LocalJSX.InputWeight & JSXBase.HTMLAttributes<HTMLInputWeightElement>;
+            "work-number": LocalJSX.WorkNumber & JSXBase.HTMLAttributes<HTMLWorkNumberElement>;
         }
     }
 }
