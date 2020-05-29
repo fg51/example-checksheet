@@ -83,17 +83,50 @@ export class AppHome {
 
           <ion-label>1. 見た目</ion-label>
           <ion-list>
-            <ion-item> 見た目</ion-item>
-            <ion-item> 重さ</ion-item>
+            <ion-item>
+              <ion-item>見た目</ion-item>
+              <ion-radio-group value="visual-level">
+                <ion-item>
+                  OK
+                  <ion-radio />
+                </ion-item>
+                <ion-item>
+                  NG <ion-radio />
+                </ion-item>
+              </ion-radio-group>
+            </ion-item>
+            <ion-item>
+              <ion-item>重さ</ion-item>
+              <ion-radio-group value="weight-level">
+                <ion-item>
+                  OK <ion-radio />
+                </ion-item>
+                <ion-item>
+                  NG <ion-radio />
+                </ion-item>
+              </ion-radio-group>
+            </ion-item>
           </ion-list>
 
           <ion-label>2. 味</ion-label>
           <ion-list>
             <ion-item>
               <ion-label>甘味</ion-label>
+              <ion-input
+                type="text"
+                name="swee-level"
+                placeholder="5"
+                color="primary"
+              />
             </ion-item>
             <ion-item>
               <ion-label>酸味</ion-label>
+              <ion-input
+                type="text"
+                name="sour-level"
+                placeholder="3"
+                color="primary"
+              />
             </ion-item>
           </ion-list>
 
