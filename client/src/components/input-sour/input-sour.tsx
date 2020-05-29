@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'input-sour',
@@ -6,6 +6,15 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class InputSour {
+  /**
+   * sour is value.
+   */
+  @Prop({ mutable: true }) value = '';
+
+  private handleChange(event: Event) {
+    this.value = event.target['value'];
+  }
+
   render() {
     return (
       <ion-item>
@@ -15,6 +24,7 @@ export class InputSour {
           name="sour-level"
           placeholder="3"
           color="primary"
+          onIonChange={(event) => this.handleChange(event)} // eslint-disable-line react/jsx-no-bind
         />
       </ion-item>
     );

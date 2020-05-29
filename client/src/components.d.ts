@@ -16,20 +16,70 @@ export namespace Components {
     interface AppRoot {
     }
     interface InputCountry {
+        /**
+          * value is property.
+         */
+        "value": string;
     }
     interface InputModel {
+        /**
+          * initialValue is placeholder.
+         */
+        "initialValue": string;
+        /**
+          * items is selectable items.
+         */
+        "items": string[];
+        /**
+          * labelTitle is title.
+         */
+        "labelTitle": string;
+        /**
+          * value is selected item.
+         */
+        "value": string;
     }
     interface InputSerial {
+        /**
+          * serial is serial number.
+         */
+        "serial": string;
     }
     interface InputSour {
+        /**
+          * sour is value.
+         */
+        "value": string;
+    }
+    interface InputStandard {
+        /**
+          * value is value.
+         */
+        "value": string;
     }
     interface InputSweet {
+        /**
+          * sweet is value.
+         */
+        "value": string;
     }
     interface InputVisual {
+        /**
+          * state is defalut state.
+         */
+        "state": boolean;
     }
     interface InputWeight {
+        /**
+          * state is defalut state.
+         */
+        "state": boolean;
     }
     interface WorkNumber {
+        /**
+          * value is work number.
+         */
+        "value": string;
     }
 }
 declare global {
@@ -81,6 +131,12 @@ declare global {
         prototype: HTMLInputSourElement;
         new (): HTMLInputSourElement;
     };
+    interface HTMLInputStandardElement extends Components.InputStandard, HTMLStencilElement {
+    }
+    var HTMLInputStandardElement: {
+        prototype: HTMLInputStandardElement;
+        new (): HTMLInputStandardElement;
+    };
     interface HTMLInputSweetElement extends Components.InputSweet, HTMLStencilElement {
     }
     var HTMLInputSweetElement: {
@@ -114,6 +170,7 @@ declare global {
         "input-model": HTMLInputModelElement;
         "input-serial": HTMLInputSerialElement;
         "input-sour": HTMLInputSourElement;
+        "input-standard": HTMLInputStandardElement;
         "input-sweet": HTMLInputSweetElement;
         "input-visual": HTMLInputVisualElement;
         "input-weight": HTMLInputWeightElement;
@@ -131,20 +188,70 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface InputCountry {
+        /**
+          * value is property.
+         */
+        "value"?: string;
     }
     interface InputModel {
+        /**
+          * initialValue is placeholder.
+         */
+        "initialValue"?: string;
+        /**
+          * items is selectable items.
+         */
+        "items"?: string[];
+        /**
+          * labelTitle is title.
+         */
+        "labelTitle"?: string;
+        /**
+          * value is selected item.
+         */
+        "value"?: string;
     }
     interface InputSerial {
+        /**
+          * serial is serial number.
+         */
+        "serial"?: string;
     }
     interface InputSour {
+        /**
+          * sour is value.
+         */
+        "value"?: string;
+    }
+    interface InputStandard {
+        /**
+          * value is value.
+         */
+        "value"?: string;
     }
     interface InputSweet {
+        /**
+          * sweet is value.
+         */
+        "value"?: string;
     }
     interface InputVisual {
+        /**
+          * state is defalut state.
+         */
+        "state"?: boolean;
     }
     interface InputWeight {
+        /**
+          * state is defalut state.
+         */
+        "state"?: boolean;
     }
     interface WorkNumber {
+        /**
+          * value is work number.
+         */
+        "value"?: string;
     }
     interface IntrinsicElements {
         "app-footer": AppFooter;
@@ -155,6 +262,7 @@ declare namespace LocalJSX {
         "input-model": InputModel;
         "input-serial": InputSerial;
         "input-sour": InputSour;
+        "input-standard": InputStandard;
         "input-sweet": InputSweet;
         "input-visual": InputVisual;
         "input-weight": InputWeight;
@@ -173,6 +281,7 @@ declare module "@stencil/core" {
             "input-model": LocalJSX.InputModel & JSXBase.HTMLAttributes<HTMLInputModelElement>;
             "input-serial": LocalJSX.InputSerial & JSXBase.HTMLAttributes<HTMLInputSerialElement>;
             "input-sour": LocalJSX.InputSour & JSXBase.HTMLAttributes<HTMLInputSourElement>;
+            "input-standard": LocalJSX.InputStandard & JSXBase.HTMLAttributes<HTMLInputStandardElement>;
             "input-sweet": LocalJSX.InputSweet & JSXBase.HTMLAttributes<HTMLInputSweetElement>;
             "input-visual": LocalJSX.InputVisual & JSXBase.HTMLAttributes<HTMLInputVisualElement>;
             "input-weight": LocalJSX.InputWeight & JSXBase.HTMLAttributes<HTMLInputWeightElement>;

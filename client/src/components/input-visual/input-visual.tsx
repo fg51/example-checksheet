@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h, Prop, Listen } from '@stencil/core';
 
 @Component({
   tag: 'input-visual',
@@ -6,7 +6,20 @@ import { Component, h, State } from '@stencil/core';
   shadow: true,
 })
 export class InputVisual {
-  @State() state = false;
+  /**
+   * state is defalut state.
+   */
+  @Prop({ mutable: true }) state: boolean = false;
+
+  @Listen('ionChange')
+  ionChangeHandler(event) {
+    this.state = event.detail.checked;
+  }
+
+  // @ts-ignore TS6133
+  private componentWillLoad() {
+    this.state = this.state;
+  }
 
   render() {
     return (

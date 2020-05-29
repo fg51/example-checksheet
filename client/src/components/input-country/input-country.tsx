@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop, Listen } from '@stencil/core';
 
 @Component({
   tag: 'input-country',
@@ -6,6 +6,16 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class InputCountry {
+  /**
+   * value is property.
+   */
+  @Prop({ mutable: true }) value = '';
+
+  @Listen('ionChange')
+  ionChangeHandler(event) {
+    this.value = event.detail.value;
+  }
+
   render() {
     return (
       <ion-item>

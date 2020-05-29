@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h, Prop, Listen } from '@stencil/core';
 
 @Component({
   tag: 'input-weight',
@@ -6,7 +6,15 @@ import { Component, h, State } from '@stencil/core';
   shadow: true,
 })
 export class InputWeight {
-  @State() state = false;
+  /**
+   * state is defalut state.
+   */
+  @Prop({ mutable: true }) state: boolean = false;
+
+  @Listen('ionChange')
+  ionChangeHandler(event) {
+    this.state = event.detail.checked;
+  }
 
   render() {
     return (
